@@ -1,0 +1,14 @@
+# Pupillometry_baseline_VR
+Pupil size correction by applying individual baseline in VR environments
+
+## Study Description
+This is the 5nd study (B5) in IGBL (Indicator of Game-Based Learning) project.
+
+## Acknowledgement
+This work was supported by the Netherlands Organization for Scientific Research (NWO) [grant numbers 055.16.117]. (https://www.nwo.nl/en/projects/05516117)
+
+## Abstract of the study
+Pupillometry is known as a reliable technique to measure cognitive load in learning and performance. However, its applicability to virtual reality (VR) environments, an emerging technology for simulation-based training, has not been validated. Specifically, the VR display causes light reflexes that confound task-evoked pupillary responses (TEPRs), impairing cognitive load measures. Through this pilot study, we validated whether task difficulty can predict cognitive load as measured by TEPRs corrected for the light reflex and if these TEPRs correlate with cognitive load self-ratings and performance. 14 students in health sciences performed observation tasks in two conditions: difficult versus easy tasks, whilst watching a VR scenario in home health care. Then, a cognitive load self-rating ensued. We used a VR system with a built-in eye-tracker and a photosensor installed to assess pupil diameter and light intensity during the scenario. Employing a method from the human-computer interaction field, we determined TEPRs by modeling the pupil light reflexes using a baseline. As predicted, the difficult task caused significantly larger TEPRs than the easy task. Only in the difficult task condition did TEPRs positively correlate with the performance measures. These results suggest that TEPRs are valid measures of cognitive load in VR training when corrected for the light reflex. It opens up possibilities to use real-time cognitive load for assessment and instructional design for VR training. Future studies should test our findings with a larger sample size, in various domains, involving complex VR functions such as haptic interaction.
+
+## Baseline calculation for pupillometry in VR
+The raw data included timestamps, light intensity, and pupil diameter. Using the baseline data, we identified the dependence between light intensity and pupil diameter for each trial of the participants. Following Watson and Yellott’s work that presented a formula describing light-adapted pupil size, a third-degree polynomial was fitted to the pupil diameter versus light intensity. This resulted in a trend line formula for each trial. Applying this formula, pupil dilation caused by light reflexes was predicted and subtracted from the raw pupil diameter. We assumed the rest of the pupil diameter to be TEPRs. These TEPRs were averaged over time for each trial, then the difference between ET and DT was tested via a dependent sample t test.
